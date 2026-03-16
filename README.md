@@ -1,4 +1,4 @@
-# GPT-Medic
+# GPT-MIMIC
 
 A foundation model for learning patient health trajectories from electronic health records, trained on the [MIMIC-IV Demo](https://physionet.org/content/mimic-iv-demo/2.2/) dataset.
 
