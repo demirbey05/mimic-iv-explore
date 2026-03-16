@@ -16,8 +16,9 @@ class LabTokenizer:
         self._fit(d_labitems, labevents)
 
         # Build vocabulary with lab tokens and quantile tokens
-        lab_tokens = sorted(set(f'<LAB {label}>' for label in self._itemid_to_label.values()))
-        quantile_tokens = [f'Q{i}' for i in range(1, self.n_quantiles + 1)]
+        # Replace spaces with underscores to avoid splitting issues
+        lab_tokens = sorted(set(f'<LAB_{label.replace(" ", "_")}>' for label in self._itemid_to_label.values()))
+        quantile_tokens = [f'<Q{i}>' for i in range(1, self.n_quantiles + 1)]
 
         all_tokens = lab_tokens + quantile_tokens
         self.vocabulary = {token: idx for idx, token in enumerate(all_tokens)}
@@ -32,7 +33,8 @@ class LabTokenizer:
                 return None
 
             label = self._itemid_to_label[itemid]
-            lab_token = f'<LAB {label}>'
+            # Replace spaces with underscores to avoid splitting issues
+            lab_token = f'<LAB_{label.replace(" ", "_")}>'
 
             # Get quantile for the value
             if itemid in self._quantile_calculators:
