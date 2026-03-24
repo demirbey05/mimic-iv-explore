@@ -1,24 +1,7 @@
-# ETHOS Tokenizer Package
+# Tokenizer Package
+# Contains two tokenizer implementations: ethos and flextpp
 
-from tokenizer.diagnosis import DiagnoseTokenizer
-from tokenizer.procedure import ProcedureTokenizer
-from tokenizer.medication import MedicationTokenizer
-from tokenizer.lab import LabTokenizer
-from tokenizer.blood_pressure import BloodPressureTokenizer
-from tokenizer.demography import DemographyTokenizer
-from tokenizer.quantile import QuantileCalculator
-from tokenizer.time_interval import TimeIntervalTokenizer
-from tokenizer.timeline import PatientTimelineTokenizer, TimelineEvent
+from . import ethos
+from . import flextpp
 
-__all__ = [
-    'DiagnoseTokenizer',
-    'ProcedureTokenizer',
-    'MedicationTokenizer',
-    'LabTokenizer',
-    'BloodPressureTokenizer',
-    'DemographyTokenizer',
-    'QuantileCalculator',
-    'TimeIntervalTokenizer',
-    'PatientTimelineTokenizer',
-    'TimelineEvent',
-]
+__all__ = ['ethos', 'flextpp']

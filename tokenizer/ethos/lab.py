@@ -1,7 +1,7 @@
 # ETHOS Tokenization Implementation for Lab Events
 
 import pandas as pd
-from tokenizer.quantile import QuantileCalculator
+from .quantile import QuantileCalculator
 
 
 class LabTokenizer:

@@ -1,7 +1,7 @@
 # ETHOS Tokenization Implementation for Blood Pressure
 
 import pandas as pd
-from tokenizer.quantile import QuantileCalculator
+from .quantile import QuantileCalculator
 
 
 class BloodPressureTokenizer:

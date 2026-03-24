@@ -5,13 +5,13 @@ import pandas as pd
 from dataclasses import dataclass
 from typing import Any
 
-from tokenizer.diagnosis import DiagnoseTokenizer
-from tokenizer.procedure import ProcedureTokenizer
-from tokenizer.medication import MedicationTokenizer
-from tokenizer.lab import LabTokenizer
-from tokenizer.blood_pressure import BloodPressureTokenizer
-from tokenizer.demography import DemographyTokenizer
-from tokenizer.time_interval import TimeIntervalTokenizer
+from .diagnosis import DiagnoseTokenizer
+from .procedure import ProcedureTokenizer
+from .medication import MedicationTokenizer
+from .lab import LabTokenizer
+from .blood_pressure import BloodPressureTokenizer
+from .demography import DemographyTokenizer
+from .time_interval import TimeIntervalTokenizer
 
 
 @dataclass
